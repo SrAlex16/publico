@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+web o pagina:
+autor: Carlos Boni
+fecha: Marzo 2021
+-->
+
+<head>
+
+
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	
+	<!-- importante SEO para la etiqueta del navegador -->
+	<title>ACTUALIDAD</title>
+	
+	<!-- una fuente de Google -->
+	<link rel="preconnect" href="https://fonts.gstatic.com"/>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet"/>
+	
+	<!-- una hoja de estilos externa-->
+	
+	<!-- una hoja de estilos personalizada-->
+	<link href="00-modelo.css" rel="stylesheet"/>
+	
+	<!-- iconos u otros elementos externos -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	
+	<!-- solo aquellos estilos que solo aplican a esta pagina -->
+    <style>
+		
+		
+		*{
+		  box-sizing: border-box;
+		  padding: 0;
+		  margin: 0;
+		}
+		
+		.marco {
+		  display: grid;
+		  border-style: solid;
+		  border-color: red;
+		  grid-template-columns: 250px auto;
+		  grid-template-rows: 52px 40px auto 40px;
+		  grid-gap: 10px;
+		  width: 100vw;
+		  height: 100vh;
+		  background-color: #DCE3D5;
+		}
+		
+		.encabezado {
+		  border-style: solid;
+		  border-color: blue;
+		  grid-column: 1 / span 2;
+		  grid-row: 1 / span 1;
+		}
+		
+		.migas {
+		  border-style: solid;
+		  border-color: yellow;
+		  grid-column: 1 / span 2;
+		  grid-row: 2 / span 1;
+		}
+		
+		.lado {
+		  border-style: solid;
+		  border-color: violet;
+		  grid-column: 1 / span 1;
+		  grid-row: 3 / span 1;
+		  background-color: #333;
+		}
+		
+		.contenido {
+		  border-style: solid;
+		  border-color: violet;
+		  grid-column: 2 / span 1;
+		  grid-row: 3 / span 1;
+		}
+		
+		.pie {
+		  border-style: solid;
+		  border-color: aqua;
+		  grid-column: 1 / span 2;
+		  grid-row: 4 / span 1;
+		}
+		
+		.navbar {
+		  overflow: hidden;
+		  background-color: #333;
+		}
+
+		.navbar a {
+		  float: left;
+		  font-size: 16px;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		.dropdown {
+		  float: left;
+		  overflow: hidden;
+		}
+
+		.dropdown .dropbtn {
+		  font-size: 16px;  
+		  border: none;
+		  outline: none;
+		  color: white;
+		  padding: 14px 16px;
+		  background-color: inherit;
+		  font-family: inherit;
+		  margin: 0;
+		}
+
+		.navbar a:hover, .dropdown:hover .dropbtn {
+		  background-color: red;
+		}
+
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #f9f9f9;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  z-index: 1;
+		}
+
+		.dropdown-content a {
+		  float: none;
+		  color: black;
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  display: block;
+		  text-align: left;
+		}
+
+		.dropdown-content a:hover {
+		  background-color: #ddd;
+		}
+
+		.dropdown:hover .dropdown-content {
+		  display: block;
+		}
+		.vertical-menu {
+		  width: auto;
+		}
+
+		.vertical-menu a {
+		  background-color: #eee;
+		  color: black;
+		  display: block;
+		  padding: 15px;
+		  text-decoration: none;
+		}
+
+		.vertical-menu a.active {
+		  background-color: #333;
+		  color: white;
+		}
+
+		.lado .navbar, .lado .navbar a, .lado .navbar>div,.lado .dropbtn {
+				width:100%;
+				float: none;
+				display:block;
+			}
+		    .lado .dropdown-content a{
+				display:none;
+			}
+		
+	</style>
+	
+	<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<!-- scripts externos de desarrollo propio en Javascript o JQuery -->
+	<script src="00-modelo.js"></script>
+	
+	<!-- scripts personalizados Javascript o JQuery -->
+	<script>
+		// aqui el codigo ...
+	</script>
+</head>
+
+
+<body>
+
+	<div class="marco">
+		<div class="encabezado">
+			<div class="navbar">
+			<a href=ejercicioPagina.html>Inicio</a>
+			<a href=actualidad.html>Actualidad</a>
+			</div>
+		</div>
+		<div class="migas">
+			<h1 style="font-family:verdana; font-size:25px"> Has visitado <span id="contador" style="font-family:verdana; font-size:25px"> 0 </span> páginas </h1>
+		</div>
+		<div class="lado">
+			<div class="navbar">
+			  <a href=ejercicioPagina.html>Inicio</a>
+			  <a href=actualidad.html>Actualidad</a>
+			</div>
+		</div>
+		<div class="contenido">
+			<h2 style="font-family:verdana; padding:5px"> Hacker reduce los tiempos de carga de GTA V Online en un 70% </h2>
+			<img style="padding:5px; float:left;" src="fotoGta.jpg" width="200" height="130">
+			<p style="font-family:verdana; font-size:15px; padding:5px">
+				Grand Thef Auto es uno de los videojuegos más conocidos de los últimos años, esta noticia trata sobre
+				uno de los problemas de este, el tiempo de carga del modo Online o multijugador. <br>
+				Según un programador conocido en Github como T0st, el problema está en el código de un archivo JSON que 
+				contiene todos los objetos que los jugadores pueden comprar dentro del propio juego, siendo un archivo
+				de 10MB, y teniendo un total de 63.000 objetos. <br>
+				Aunque 63.000 entradas de código pueda parecer una cantidad abrumadora de carga, no debería de ser demasiado
+				trabajo para los ordenadores actuales que cuentan con una buena tarjeta gráfica.Por ello, el hacker pensó en
+				cargar parte del archivo en memoria caché, lo que derivó en una reducción del 50% en el tiempo de carga. <br>
+				T0st también se encontró con que el propio juego lee los datos del archivo con un proceso muy inficiente, por
+				lo que optó por optimizarlo eliminado los datos repetidos. <br>
+				Estas dos mejoras dieron al juego una mejora de un 70% aproximadamente en los tiempos de conexión del modo Online,
+				pasando de 5 o 10 minutos (dependiendo del ordenador y de la conexión) a 2 minutos.<br>
+				El programador ha puesto el código de mejora en su perfil de Github, mencionando que funciona con la versión del
+				juego actual de Steam, pero ha recordado que el uso de archivos modificados del juego en multijugador pordría verse como
+				hacer trampas y podría provocar baneos de cuentas por parte de Rockstar Games.
+			</p>
+			<br>
+			<a style="font-family:verdana; padding:5px" href="https://github.com/tostercx/GTAO_Booster_PoC"  target="_blank">Enlace al perfil de Github de T0st </a>
+		</div>
+		<div class="pie">
+			<a href="https://instagram.com/alejandro6tm9" target="_blank">
+				<img style="padding:5px; float:left;" src="iconoInstragram.png" width="35" height="35" >
+			</a>
+			<a href="https://twitter.com/sralex16" target="_blank">
+				<img style="padding:5px; float:left;" src="iconoTwitter.png" width="40" height="35" >
+			</a>
+			<a href="https://github.com/sralex16" target="_blank">
+				<img style="padding:5px; float:left;" src="iconoGithub.png" width="40" height="40" >
+			</a>
+		</div>
+	</div>
+
+	<script>
+		if (sessionStorage.clickcount) {
+		  sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+		} else {
+		  sessionStorage.clickcount = 1;
+		}
+		document.getElementById("contador").innerHTML = sessionStorage.clickcount;
+	</script>
+
+</body>
+</html>
