@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+    <link href="login.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
     <head>
-        <meta charset="UTF-8"/>
-	    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+       
     </head>
     <body>
-        <form action="/action_page.php">
-            <label for="usuario">Usuario:</label><br>
-            <input type="text" id="usuario" name="usuario"><br>
-            <label for="contraseña">contraseña:</label><br>
-            <input type="text" id="contraseña" name="contraseña"><br><br>
-            <input type="submit" value="Submit">
-        </form> 
+        <div class="login-page">
+            <div class="form">
+              <form class="register-form">
+                <input type="text" placeholder="name"/>
+                <input type="password" placeholder="password"/>
+                <input type="text" placeholder="email address"/>
+                <button>create</button>
+              </form>
+              <form class="login-form">
+                <input type="text" placeholder="Usuario"/>
+                <input type="password" placeholder="Contraseña"/>
+                <button>Iniciar sesión</button>
+              </form>
+            </div>
+          </div>
     </body>
 </html>
