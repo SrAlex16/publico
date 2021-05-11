@@ -13,7 +13,7 @@
       <form class="login" name="formulario" onSubmit="return entrar()">
         <input type="usuario" placeholder="Usuario" name="usuario" />
         <input type="password" placeholder="Contraseña" name="password" />
-        <button>Iniciar sesión</button>
+        <button  onSubmit="return validarXML()">Iniciar sesión</button>
       </form>
 
     </div>
@@ -32,6 +32,18 @@
 
         return false;
       }
+    }
+
+    function validarXML() {
+      // lee desde aquí.
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          miFuncion(this);
+        }
+      };
+      xhr.open("GET", "https://github.com/SrAlex16/publico/blob/main/loginXml.xml", true);
+      xhr.send();
     }
   </script>
 </body>
