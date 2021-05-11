@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
-<link href="login.css" rel="stylesheet" type="text/css">
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <head>
-
+  <link href="login.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
 <body>
-  <div class="login-page">
+  <div class="login">
     <div class="form">
-      <form class="login">
+      <form class="login" name="formulario" onSubmit="return entrar()">
         <input type="usuario" placeholder="Usuario" name="usuario" />
         <input type="password" placeholder="Contraseña" name="password" />
         <button>Iniciar sesión</button>
       </form>
-      <p id='usuario'></p>
-      <p id='password'></p>
+
     </div>
   </div>
   <script>
     // seccion de codigo javascript 
     // Valida que el browser lo permita
-    document.getElementById("usuario").innerHTML = sessionStorage.getItem("usuario");
-    document.getElementById("password").innerHTML = sessionStorage.getItem("password");
+    document.getElementByName("usuario").innerHTML = sessionStorage.getItem("usuario");
+    document.getElementByName("password").innerHTML = sessionStorage.getItem("password");
 
     function entrar() {
-      function validate() {
-        var usuario = document.getElementById("usuario").value;
-        var password = document.getElementById("password").value;
-        if (username == "alex" && password == "123a") {
-          alert("Login successfully");
-          
-          return false;
-        }
+      sessionStorage.setItem("usuario", document.forms["formulario"]["usuario"].value);
+      sessionStorage.setItem("password", document.forms["formulario"]["password"].value);
+      if (sessionStorage.getItem("usuario") == "alex" && sessionStorage.getItem("password") == "tubio") {
+        alert("Login successfully");
 
+        return false;
       }
+    }
   </script>
 </body>
 
