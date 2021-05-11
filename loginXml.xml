@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8">
-<login>
-    <crendenciales>
-        <credencial usuario="alex" password="tubio" />
-        <credencial usuario="usuario1" password="1234a" />
-        <credencial usuario="usuario2" password="1234a" />
-        <credencial usuario="usuario3" password="1234a" />
-    <crendenciales>
-</login>
+<registrados>
+    <usuario>
+        <nombre>USR1</nombre>
+        <clave>clave1</clave>
+</usuario>
+    <usuario>
+        <nombre>USR2</nombre>
+        <clave>clave2</clave>
+</usuario>
+    <usuario>
+        <nombre>USR3</nombre>
+        <clave>clave3</clave>
+</usuario>
+    <usuario>
+        <nombre>USR4</nombre>
+        <clave>clave4</clave>
+</usuario>
+    <usuario>
+        <nombre>Alex</nombre>
+        <clave>Tubio</clave>
+    </usuario>
+</registrados>
