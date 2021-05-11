@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-    <link href="login.css" rel="stylesheet" type="text/css">
-    <meta charset="UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <head>
-       
-    </head>
-    <body>
-        <div class="login-page">
-            <div class="form">
-              <form class="register-form">
-                <input type="text" placeholder="name"/>
-                <input type="password" placeholder="password"/>
-                <input type="text" placeholder="email address"/>
-                <button>create</button>
-              </form>
-              <form class="login-form">
-                <input type="text" placeholder="Usuario"/>
-                <input type="password" placeholder="Contraseña"/>
-                <button>Iniciar sesión</button>
-              </form>
-            </div>
-          </div>
-    </body>
+<link href="login.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<head>
+
+</head>
+
+<body>
+  <div class="login-page">
+    <div class="form">
+      <form class="login">
+        <input type="usuario" placeholder="Usuario" name="usuario" />
+        <input type="password" placeholder="Contraseña" name="password" />
+        <button>Iniciar sesión</button>
+      </form>
+      <p id='usuario'></p>
+      <p id='password'></p>
+    </div>
+  </div>
+  <script>
+    // seccion de codigo javascript 
+    // Valida que el browser lo permita
+    document.getElementById("usuario").innerHTML = sessionStorage.getItem("usuario");
+    document.getElementById("password").innerHTML = sessionStorage.getItem("password");
+
+    function entrar() {
+      function validate() {
+        var usuario = document.getElementById("usuario").value;
+        var password = document.getElementById("password").value;
+        if (username == "alex" && password == "123a") {
+          alert("Login successfully");
+          
+          return false;
+        }
+
+      }
+  </script>
+</body>
+
 </html>
