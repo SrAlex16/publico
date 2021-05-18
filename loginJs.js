@@ -57,11 +57,12 @@ function controlar(){
 		if (typeof(Storage) !== "undefined") {
 		  
 		  // oculta la opción de login 
-		  $("#ingresar").hide();
+		  // $("#ingresar").hide();
 		  
 		  // Almacena un valor usando el método setItem del objeto localStorage
 		  var x=document.forms["miFormulario"]["formUsuario"].value;
 		  var y=document.forms["miFormulario"]["formClave"].value;
+		  console.log(x,y);
 		  sessionStorage.setItem("usuarioIntentando", x);
 		  sessionStorage.setItem("claveIntentando", y);
 		  
