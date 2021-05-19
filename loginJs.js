@@ -72,7 +72,7 @@ function controlar(){
 		} else {
 		  document.getElementById("mensaje").innerHTML = "Este navegador no soporta web storage...";
 		}
-		window.location.assign("proyecto_tercer_trimestre.html");
+		window.location.replace("proyecto_tercer_trimestre.html");
 	}
 	
 	function validarXML() {
