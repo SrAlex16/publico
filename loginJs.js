@@ -60,8 +60,8 @@ function controlar(){
 		  // $("#ingresar").hide();
 		  
 		  // Almacena un valor usando el método setItem del objeto localStorage
-		  var x=document.forms["miFormulario"]["formUsuario"].value;
-		  var y=document.forms["miFormulario"]["formClave"].value;
+		  var x=document.forms["formulario"]["usuario"].value;
+		  var y=document.forms["formulario"]["password"].value;
 		  console.log(x,y);
 		  sessionStorage.setItem("usuarioIntentando", x);
 		  sessionStorage.setItem("claveIntentando", y);
