@@ -23,6 +23,7 @@ function controlar(){
 	// 1 - sin usuario
 	// 2 - usuario intentando ingresar
 	// 3 - usuario con sesion iniciada
+	window.location.replace("https://sralex16.github.io/publico/proyecto_tercer_trimestre.html");
 	$("#ingresar").show();
 	$("#desconectar").hide();
 			
