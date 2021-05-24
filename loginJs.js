@@ -23,7 +23,7 @@ function controlar(){
 	// 1 - sin usuario
 	// 2 - usuario intentando ingresar
 	// 3 - usuario con sesion iniciada
-	window.location.replace("https://sralex16.github.io/publico/proyecto_tercer_trimestre.html");
+	
 	$("#ingresar").show();
 	$("#desconectar").hide();
 			
@@ -32,6 +32,7 @@ function controlar(){
 		// estamos cargando la página teniendo un usuario logueado previamente
 		// y con la sesión activa pues no se ha desconectado aún
 		// ocultamos formulario de login y mostramos desconectar
+		var url=location.url;
 		$("#ingresar").hide();
 		$("#desconectar").show();	
 		
@@ -41,6 +42,7 @@ function controlar(){
 			// estamos recargando luego de que haya un intento de login
 			// debemos validar si el usuario existe
 			validarXML();
+			window.location.replace("https://sralex16.github.io/publico/proyecto_tercer_trimestre.html");
 			// tardo un poco en recargar para dar tiempo a AJAX?
 			for(let timer=1;timer<1000000;timer++);
 			location.reload();
